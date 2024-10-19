@@ -7,11 +7,6 @@ on:
         description: "is publish to firefox"
         type: string
         required: false
-      firefox_beta:
-        default: "0"
-        description: "is publish to firefox beta"
-        type: string
-        required: false
       edge:
         default: "0"
         description: "is publish to edge"
@@ -117,28 +112,18 @@ jobs:
         name: submit to firefox
         with:
           zipFilePath: "dist/firefox_store.zip"
-          sourcesZipFilePath: "dist/immersive-translate-source.zip"
-          extensionId: "{5efceaa7-f3a2-4e59-a54b-85319448e305}"
+          sourcesZipFilePath: "dist/translify-source.zip"
+          extensionId: "{05741c5c-57ee-4a51-a1d5-3ce338d8fe98}"
           jwtIssuer: ${{ secrets.FIREFOX_API_KEY }}
           jwtSecret: ${{ secrets.FIREFOX_API_SECRET }}
 
-      - uses: cardinalby/webext-buildtools-firefox-addons-action@v1
-        if: steps.check_version.outcome == 'success' && github.event.inputs.firefox_beta == '1'
-        name: submit beta to firefox
-        with:
-          zipFilePath: "dist/firefox_store_beta.zip"
-          sourcesZipFilePath: "dist/immersive-translate-source.zip"
-          extensionId: "{5efceaa7-f3a2-4e59-a54b-85319448e306}"
-          jwtIssuer: ${{ secrets.FIREFOX_API_KEY }}
-          jwtSecret: ${{ secrets.FIREFOX_API_SECRET }}
-      - uses: wdzeng/edge-addon@v1
+      - uses: wdzeng/edge-addon@v2
         if: steps.check_version.outcome == 'success' && github.event.inputs.edge == '1'
         with:
-          product-id: d49a3368-918f-446f-8d8b-4dadb0f08e8e
+          product-id: d947e25d-9ee7-4429-b940-15c1d314a7b8
           zip-path: dist/edge_store.zip
           client-id: ${{ secrets.EDGE_CLIENT_ID }}
-          client-secret: ${{ secrets.EDGE_CLIENT_SECRET }}
-          access-token-url: ${{ secrets.EDGE_ACCESS_TOKEN_URL }}
+          api-key: ${{ secrets.API_KEY }}
       # - uses: inverse/edge-addon@v1.0.1
       #   with:
       #     product_id: d49a3368-918f-446f-8d8b-4dadb0f08e8
