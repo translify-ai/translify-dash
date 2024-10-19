@@ -23,7 +23,7 @@ body {
   padding: 16px 20px;
 }
 
-.immersive-translate-popup-overlay {
+.translify-popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +32,7 @@ body {
   touch-action: none;
 }
 
-.immersive-translate-popup-wrapper {
+.translify-popup-wrapper {
   background: var(--background-color);
   border-radius: 10px;
   border: 1px solid var(--muted-border-color);

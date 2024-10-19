@@ -45,7 +45,7 @@
   height: 8px;
 }
 
-.immersive-translate-loading-spinner {
+.translify-loading-spinner {
   vertical-align: middle !important;
   width: 10px !important;
   height: 10px !important;
@@ -56,11 +56,11 @@
   border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
   border-radius: 50% !important;
   padding: 0 !important;
-  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  -webkit-animation: translify-loading-animation 0.6s infinite linear !important;
+  animation: translify-loading-animation 0.6s infinite linear !important;
 }
 
-@-webkit-keyframes immersive-translate-loading-animation {
+@-webkit-keyframes translify-loading-animation {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -70,7 +70,7 @@
   }
 }
 
-@keyframes immersive-translate-loading-animation {
+@keyframes translify-loading-animation {
   from {
     transform: rotate(0deg);
   }

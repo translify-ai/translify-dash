@@ -41,7 +41,7 @@ ul.select-link-ul.select-link-ul {
 a.select-link-selected {
   background-color: var(--primary-focus);
 }
-.immersive-translate-no-select {
+.translify-no-select {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */

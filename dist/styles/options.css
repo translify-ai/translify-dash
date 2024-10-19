@@ -154,7 +154,7 @@ a.no-focus:focus,
   --background-color: transparent;
 }
 
-.immersive-translate-status {
+.translify-status {
   font-size: 0.875rem;
 }
 
@@ -764,7 +764,7 @@ article {
   }
 }
 
-.service-container .immersive-translate-link {
+.service-container .translify-link {
   color: var(--h5-color);
   text-decoration: underline;
 }

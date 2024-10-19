@@ -1,4 +1,4 @@
-.immersive-translate-input {
+.translify-input {
   position: absolute;
   top: 0;
   right: 0;
@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 }
-.immersive-translate-attach-loading::after {
+.translify-attach-loading::after {
   content: " ";
 
   --loading-color: #f78fb6;
@@ -31,7 +31,7 @@
   z-index: 100;
 }
 
-.immersive-translate-loading-spinner {
+.translify-loading-spinner {
   vertical-align: middle !important;
   width: 10px !important;
   height: 10px !important;
@@ -42,11 +42,11 @@
   border-left: 2px rgba(0, 0, 0, 0.375) solid !important;
   border-radius: 50% !important;
   padding: 0 !important;
-  -webkit-animation: immersive-translate-loading-animation 0.6s infinite linear !important;
-  animation: immersive-translate-loading-animation 0.6s infinite linear !important;
+  -webkit-animation: translify-loading-animation 0.6s infinite linear !important;
+  animation: translify-loading-animation 0.6s infinite linear !important;
 }
 
-@-webkit-keyframes immersive-translate-loading-animation {
+@-webkit-keyframes translify-loading-animation {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -56,7 +56,7 @@
   }
 }
 
-@keyframes immersive-translate-loading-animation {
+@keyframes translify-loading-animation {
   from {
     transform: rotate(0deg);
   }
@@ -66,7 +66,7 @@
   }
 }
 
-.immersive-translate-input-loading {
+.translify-input-loading {
   --loading-color: #f78fb6;
   width: 6px;
   height: 6px;
@@ -127,7 +127,7 @@
   }
 }
 
-.immersive-translate-toast {
+.translify-toast {
   display: flex;
   position: fixed;
   z-index: 2147483647;
@@ -145,19 +145,19 @@
   color: #333;
 }
 
-.immersive-translate-toast-content {
+.translify-toast-content {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.immersive-translate-toast-hidden {
+.translify-toast-hidden {
   margin: 0 20px 0 72px;
   text-decoration: underline;
   cursor: pointer;
 }
 
-.immersive-translate-toast-close {
+.translify-toast-close {
   color: #666666;
   font-size: 20px;
   font-weight: bold;
@@ -166,20 +166,20 @@
 }
 
 @media screen and (max-width: 768px) {
-  .immersive-translate-toast {
+  .translify-toast {
     top: 0;
     padding: 12px 0px 0 10px;
   }
-  .immersive-translate-toast-content {
+  .translify-toast-content {
     flex-direction: column;
     text-align: center;
   }
-  .immersive-translate-toast-hidden {
+  .translify-toast-hidden {
     margin: 10px auto;
   }
 }
 
-.immersive-translate-modal {
+.translify-modal {
   display: none;
   position: fixed;
   z-index: 2147483647;
@@ -193,7 +193,7 @@
   font-size: 15px;
 }
 
-.immersive-translate-modal-content {
+.translify-modal-content {
   background-color: #fefefe;
   margin: 10% auto;
   padding: 40px 24px 24px;
@@ -208,27 +208,27 @@
 }
 
 @media screen and (max-width: 768px) {
-  .immersive-translate-modal-content {
+  .translify-modal-content {
     margin: 50% auto !important;
   }
 }
 
-.immersive-translate-modal .immersive-translate-modal-content-in-input {
+.translify-modal .translify-modal-content-in-input {
   max-width: 500px;
 }
-.immersive-translate-modal-content-in-input .immersive-translate-modal-body {
+.translify-modal-content-in-input .translify-modal-body {
   text-align: left;
   max-height: unset;
 }
 
-.immersive-translate-modal-title {
+.translify-modal-title {
   text-align: center;
   font-size: 16px;
   font-weight: 700;
   color: #333333;
 }
 
-.immersive-translate-modal-body {
+.translify-modal-body {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
@@ -238,13 +238,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .immersive-translate-modal-body {
+  .translify-modal-body {
     max-height: 250px;
     overflow-y: auto;
   }
 }
 
-.immersive-translate-close {
+.translify-close {
   color: #666666;
   position: absolute;
   right: 16px;
@@ -253,21 +253,21 @@
   font-weight: bold;
 }
 
-.immersive-translate-close:hover,
-.immersive-translate-close:focus {
+.translify-close:hover,
+.translify-close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-.immersive-translate-modal-footer {
+.translify-modal-footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 24px;
 }
 
-.immersive-translate-btn {
+.translify-btn {
   width: fit-content;
   color: #fff;
   background-color: #ea4c89;
@@ -283,37 +283,37 @@
   transition: background-color 0.3s ease;
 }
 
-.immersive-translate-btn:hover {
+.translify-btn:hover {
   background-color: #f082ac;
 }
-.immersive-translate-btn:disabled {
+.translify-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
-.immersive-translate-btn:disabled:hover {
+.translify-btn:disabled:hover {
   background-color: #ea4c89;
 }
 
-.immersive-translate-cancel-btn {
+.translify-cancel-btn {
   /* gray color */
   background-color: rgb(89, 107, 120);
 }
 
-.immersive-translate-cancel-btn:hover {
+.translify-cancel-btn:hover {
   background-color: hsl(205, 20%, 32%);
 }
 
-.immersive-translate-action-btn {
+.translify-action-btn {
   background-color: transparent;
   color: #ea4c89;
   border: 1px solid #ea4c89;
 }
 
-.immersive-translate-btn svg {
+.translify-btn svg {
   margin-right: 5px;
 }
 
-.immersive-translate-link {
+.translify-link {
   cursor: pointer;
   user-select: none;
   -webkit-user-drag: none;
@@ -322,7 +322,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
-.immersive-translate-primary-link {
+.translify-primary-link {
   cursor: pointer;
   user-select: none;
   -webkit-user-drag: none;
@@ -331,16 +331,16 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 }
 
-.immersive-translate-modal input[type="radio"] {
+.translify-modal input[type="radio"] {
   margin: 0 6px;
   cursor: pointer;
 }
 
-.immersive-translate-modal label {
+.translify-modal label {
   cursor: pointer;
 }
 
-.immersive-translate-close-action {
+.translify-close-action {
   position: absolute;
   top: 2px;
   right: 0px;
