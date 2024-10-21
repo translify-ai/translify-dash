@@ -36,6 +36,11 @@ jobs:
     concurrency: manual-build
     if: github.event.inputs.chrome == '1' || github.event.inputs.firefox == '1' || github.event.inputs.edge == '1' || github.event.inputs.firefox_beta == '1'
     steps:
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
       - name: Check out repository code
         uses: actions/checkout@v3
         with:
