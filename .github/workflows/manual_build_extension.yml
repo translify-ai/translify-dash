@@ -128,7 +128,7 @@ jobs:
           product-id: d947e25d-9ee7-4429-b940-15c1d314a7b8
           zip-path: dist/edge_store.zip
           client-id: ${{ secrets.EDGE_CLIENT_ID }}
-          api-key: ${{ secrets.API_KEY }}
+          api-key: ${{ secrets.EDGE_API_KEY }}
       # - uses: inverse/edge-addon@v1.0.1
       #   with:
       #     product_id: d49a3368-918f-446f-8d8b-4dadb0f08e8
