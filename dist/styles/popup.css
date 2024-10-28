@@ -752,10 +752,6 @@ select.text-gray-6 {
   padding: 2px 3px 0 8px;
 }
 
-.share-button-container svg {
-  fill: var(--text-gray-9);
-}
-
 .min-select-container:hover,
 .language-select-container:hover,
 .widget-item:hover {
