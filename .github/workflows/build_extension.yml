@@ -22,9 +22,9 @@ on:
         description: "is publish to chrome"
         type: string
         required: false
-  # repository_dispatch:
-  #   types:
-  #     - build-nightly-extension
+  repository_dispatch:
+    types:
+      - build-nightly-extension
 jobs:
   build:
     runs-on: ubuntu-latest
